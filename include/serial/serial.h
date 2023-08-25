@@ -45,8 +45,10 @@
 #include <stdexcept>
 #include <serial/v8stdint.h>
 
+#ifndef THROW
 #define THROW(exceptionClass, message) throw exceptionClass(__FILE__, \
-__LINE__, (message) )
+	__LINE__, (message))
+#endif
 
 namespace serial {
 
